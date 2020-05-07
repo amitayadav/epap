@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="frontend.layout" template="/WEB-INF/tiles/layouts/frontend/frontendLayout.jsp">
+		<put-attribute name="page-title" value="Home" />
+		<put-attribute name="page-header" value="/WEB-INF/tiles/layouts/common/header.jsp" />
+		<put-attribute name="page-menu" value="/WEB-INF/tiles/layouts/common/menu.jsp" />
+		<put-attribute name="page-content" value="/WEB-INF/tiles/layouts/frontend/body.jsp" />
+		<put-attribute name="page-footer" value="/WEB-INF/tiles/layouts/common/footer.jsp" />
+	</definition>
+	
+	<definition name="home.dayauctions" extends="frontend.layout">
+		<put-attribute name="page-title" value="EPAP | Day Auctions" />
+		<put-attribute name="page-content" value="/WEB-INF/views/home/HM_auctionList.jsp" />
+	</definition>
+	
+	<definition name="home.mcq" extends="frontend.layout">
+		<put-attribute name="page-title" value="EPAP | Day Auctions" />
+		<put-attribute name="page-content" value="/WEB-INF/tiles/layouts/frontend/mcq.jsp" />
+	</definition>
+	
+	<definition name="home.auctiontrades" extends="frontend.layout">
+		<put-attribute name="page-title" value="EPAP | Auction Trades" />
+		<put-attribute name="page-content" value="/WEB-INF/views/home/HM_auctionTradesList.jsp" />
+	</definition>
+	
+	
+	<definition name="authentication.layout" template="/WEB-INF/tiles/layouts/authentication/authenticationLayout.jsp">
+		<put-attribute name="page-title" value="EPAP | Login" />
+		<put-attribute name="page-header" value="/WEB-INF/tiles/layouts/common/header.jsp" />
+		<put-attribute name="page-menu" value="/WEB-INF/tiles/layouts/common/menu.jsp" />
+		<put-attribute name="page-content" value="/WEB-INF/tiles/layouts/authentication/login.jsp" />
+		<put-attribute name="page-footer" value="/WEB-INF/tiles/layouts/common/footer.jsp" />
+	</definition>
+	
+	<definition name="login.layout" extends="authentication.layout">
+		<put-attribute name="page-title" value="EPAP | Login" />
+		<put-attribute name="page-header" value="/WEB-INF/tiles/layouts/common/header.jsp" />
+		<put-attribute name="page-menu" value="/WEB-INF/tiles/layouts/common/menu.jsp" />
+		<put-attribute name="page-content" value="/WEB-INF/tiles/layouts/authentication/login.jsp" />
+		<put-attribute name="page-footer" value="/WEB-INF/tiles/layouts/common/footer.jsp" />
+	</definition>
+	
+	
+		<definition name="login.otp.box" extends="authentication.layout">
+		<put-attribute name="page-title" value="EPAP | LoginOtpBox" />
+		<put-attribute name="page-header" value="/WEB-INF/tiles/layouts/common/header.jsp" />
+		<put-attribute name="page-menu" value="/WEB-INF/tiles/layouts/common/menu.jsp" />
+		<put-attribute name="page-content" value="/WEB-INF/tiles/layouts/authentication/loginOtpbox.jsp" />
+		<put-attribute name="page-footer" value="/WEB-INF/tiles/layouts/common/footer.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="registration.phase1.layout" extends="authentication.layout">
+		<put-attribute name="page-title" value="EPAP | Registration" />
+		<put-attribute name="page-header" value="/WEB-INF/tiles/layouts/common/header.jsp" />
+		<put-attribute name="page-menu" value="/WEB-INF/tiles/layouts/common/menu.jsp" />
+		<put-attribute name="page-content" value="/WEB-INF/tiles/layouts/authentication/registrationphase1.jsp" />
+		<put-attribute name="page-footer" value="/WEB-INF/tiles/layouts/common/footer.jsp" />
+	</definition>
+	
+	<definition name="forgot.password.layout" extends="authentication.layout">
+		<put-attribute name="page-title" value="EPAP | Forgot Password" />
+		<put-attribute name="page-header" value="/WEB-INF/tiles/layouts/common/header.jsp" />
+		<put-attribute name="page-menu" value="/WEB-INF/tiles/layouts/common/menu.jsp" />
+		<put-attribute name="page-content" value="/WEB-INF/tiles/layouts/authentication/forgotpassword.jsp" />
+		<put-attribute name="page-footer" value="/WEB-INF/tiles/layouts/common/footer.jsp" />
+	</definition>
+	
+	<definition name="backend.layout" template="/WEB-INF/tiles/layouts/backend/backendLayout.jsp">
+		<put-attribute name="page-title" value="EPAP | Dashboard" />
+		<put-attribute name="page-header" value="/WEB-INF/tiles/layouts/backend/backend-header.jsp" />
+		<put-attribute name="page-menu" value="/WEB-INF/tiles/layouts/backend/backend-menu.jsp" />
+		<put-attribute name="page-content" value="/WEB-INF/tiles/layouts/backend/backend-body.jsp" />
+		<put-attribute name="page-footer" value="/WEB-INF/tiles/layouts/backend/backend-footer.jsp" />
+	</definition>
+	
+	<definition name="reset.password.layout" extends="authentication.layout">
+		<put-attribute name="page-title" value="EPAP | Login" />
+		<put-attribute name="page-header" value="/WEB-INF/tiles/layouts/common/header.jsp" />
+		<put-attribute name="page-menu" value="/WEB-INF/tiles/layouts/common/menu.jsp" />
+		<put-attribute name="page-content" value="/WEB-INF/tiles/layouts/authentication/resetpassword.jsp" />
+		<put-attribute name="page-footer" value="/WEB-INF/tiles/layouts/common/footer.jsp" />
+	</definition>
+	<definition name="exception.layout" template="/WEB-INF/tiles/layouts/exception/exceptionError.jsp"/>
+	
+	<definition name="403.forbidden.layout" template="/WEB-INF/tiles/layouts/exception/forbidden403.jsp"/>
+	
+	<definition name="404.notfound.layout" template="/WEB-INF/tiles/layouts/exception/notfound404.jsp"/>
+	
+	<definition name="account.verification.layout" template="/WEB-INF/tiles/layouts/common/accountVerification.jsp"/>
+
+</tiles-definitions>

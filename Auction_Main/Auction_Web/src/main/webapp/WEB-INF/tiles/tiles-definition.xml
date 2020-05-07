@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+
+<!-- Common Templates ====================================================================================== -->
+	<definition name="registration.phase2" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Account Profile Registration" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/registrationphase2.jsp" />
+	</definition>
+
+	<definition name="registration.phase2.roleuser" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Account Profile Registration" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/registrationphase2ForRoleUser.jsp" />
+	</definition>
+	
+
+	<definition name="dashboard" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Dashboard" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/dashboard.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.dashboard" template="/WEB-INF/views/common/dashboard.jsp">  
+	</definition>
+
+	<definition name="change.password" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Change Password" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/changepassword.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.change.password" template="/WEB-INF/views/common/changepassword.jsp">  
+	</definition>
+	<definition name="edit.profile" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Edit Profile" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/editProfile.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.edit.profile" template="/WEB-INF/views/common/editProfile.jsp">  
+	</definition>
+	<definition name="edit.profile.user" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Edit Profile" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/editProfileUser.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.edit.profile.user" template="/WEB-INF/views/common/editProfileUser.jsp">  
+	</definition>
+	<definition name="comments.management" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Comments Management" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/comments.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.comments.management" template="/WEB-INF/views/common/comments.jsp">  
+	</definition>
+	<definition name="auction.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Daily Auction" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/auctionList.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.auction.list" template="/WEB-INF/views/common/auctionList.jsp">  
+	</definition>
+	<definition name="auction.trades.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Daily Auction" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/auctionTradesList.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.auction.trades.list" template="/WEB-INF/views/common/auctionTradesList.jsp">  
+	</definition>
+	<definition name="auction.offers" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Daily Auction" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/auctionOffersList.jsp" />
+	</definition>
+		<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.auction.offers" template="/WEB-INF/views/common/auctionOffersList.jsp">  
+	</definition>
+	<definition name="auction.bids" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Daily Auction" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/auctionBidsList.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.auction.bids" template="/WEB-INF/views/common/auctionBidsList.jsp">  
+	</definition>
+	<definition name="messaging" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Messaging" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/messaging.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.messaging" template="/WEB-INF/views/common/messaging.jsp">  
+	</definition>
+<!-- General Templates =============================================================================== -->
+
+    <definition name="general.shipper.shipperagent.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shipper AND ShipperAgentl List" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/shipperAndShipperAgentlList.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.general.shipper.shipperagent.list" template="/WEB-INF/views/common/shipperAndShipperAgentlList.jsp">  
+	</definition>
+
+      <definition name="admin.pickup.tickets" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Admin And AdminShipper PickupTickets" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/pickupTickets.jsp" />
+	</definition>
+	
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.pickup.tickets" template="/WEB-INF/views/common/pickupTickets.jsp">  
+	</definition>
+
+
+<!-- Common Report Templates =============================================================================== -->
+	<definition name="report.general" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | General Reports" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/reportGeneral.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.report.general" template="/WEB-INF/views/common/reportGeneral.jsp">  
+	</definition>
+	
+
+<!-- Seller Buyer Shipper ================================================================================== -->
+	<definition name="agent.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Agent List" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/agentList.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.agent.list" template="/WEB-INF/views/common/agentList.jsp">  
+	</definition>
+	<definition name="account.request" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Messaging" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/accountRequest.jsp" />
+	</definition>
+<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.account.request" template="/WEB-INF/views/common/accountRequest.jsp">  
+	</definition>
+
+<!-- Seller Templates ====================================================================================== -->
+	<definition name="seller.home" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Seller Dashboard" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/views/seller/SM_sellerHome.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="seller.info.picture" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Seller Info And Picture" />
+		<put-attribute name="page-content" value="/WEB-INF/views/seller/SM_sellerInfo.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.seller.info.picture" template="/WEB-INF/views/seller/SM_sellerInfo.jsp">  
+	</definition>
+	
+	<definition name="seller.auction.request.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Seller Auction Request" />
+		<put-attribute name="page-content" value="/WEB-INF/views/seller/SM_sellerAuctionRequestList.jsp" />
+	</definition>
+	<definition name="ajax.seller.auction.request.list" template="/WEB-INF/views/seller/SM_sellerAuctionRequestList.jsp">  
+	</definition>
+	<definition name="seller.auction.request" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Seller Auction Request" />
+		<put-attribute name="page-content" value="/WEB-INF/views/seller/SM_auctionRequest.jsp" />
+	</definition>
+		<definition name="ajax.seller.auction.request" template="/WEB-INF/views/seller/SM_auctionRequest.jsp">  
+	</definition>
+	<definition name="seller.financial.statement" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Seller Statement" />
+		<put-attribute name="page-content" value="/WEB-INF/views/seller/SM_accountStatement.jsp" />
+	</definition>
+	<definition name="ajax.seller.financial.statement" template="/WEB-INF/views/seller/SM_accountStatement.jsp">  
+	</definition>
+		<definition name="seller.pickup.tickets" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Seller pickupTickets" />
+		<put-attribute name="page-content" value="/WEB-INF/views/seller/SM_pickupTickets.jsp" />
+	</definition>
+	<definition name="ajax.seller.pickup.tickets" template="/WEB-INF/views/seller/SM_pickupTickets.jsp">  
+	</definition>
+	<definition name="seller.auction.offer.placing" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Seller Auction Offer Placing" />
+		<put-attribute name="page-content" value="/WEB-INF/views/seller/SM_auctionOfferPlacing.jsp" />
+	</definition>
+		<definition name="ajax.seller.auction.offer.placing" template="/WEB-INF/views/seller/SM_auctionOfferPlacing.jsp">  
+	</definition>
+	<definition name="seller.shippers.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shippers" />
+		<put-attribute name="page-content" value="/WEB-INF/views/seller/SM_shippers.jsp" />
+	</definition>
+		<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.seller.shippers.list" template="/WEB-INF/views/seller/SM_shippers.jsp">  
+	</definition>
+	<definition name="seller.change.location" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shippers" />
+		<put-attribute name="page-content" value="/WEB-INF/views/seller/SM_changeLocation.jsp" />
+	</definition>
+	
+	<definition name="seller.sales.notices" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | salesnotices" />
+		<put-attribute name="page-content" value="/WEB-INF/views/seller/SM_sellerSalesNotices.jsp" />
+	</definition>
+	
+	
+	<!-- Ajax Based EPAP - 19-10-2018 -->
+	<definition name="ajax.seller.sales.notices" template="/WEB-INF/views/seller/SM_sellerSalesNotices.jsp">  
+	</definition>
+	
+<!-- Buyer Templates ======================================================================================= -->
+	<definition name="buyer.home" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Buyer Dashboard" />
+		<put-attribute name="page-content" value="/WEB-INF/views/buyer/BM_buyerHome.jsp" />
+	</definition>
+	
+	<definition name="buyer.financial.statement" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Balance Statement" />
+		<put-attribute name="page-content" value="/WEB-INF/views/buyer/BM_accountStatement.jsp" />
+	</definition>
+		<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.buyer.financial.statement" template="/WEB-INF/views/buyer/BM_accountStatement.jsp">  
+	</definition>
+	
+	<definition name="invoice.purchase.buyer" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Purchase Invoice" />
+		<put-attribute name="page-content" value="/WEB-INF/views/buyer/BM_purchaseInvoices.jsp" />
+	</definition>
+	
+	<!-- Ajax Based EPAP - 19-10-2019 -->
+	<definition name="ajax.invoice.purchase.buyer" template="/WEB-INF/views/buyer/BM_purchaseInvoices.jsp">  
+	</definition>
+	
+	<definition name="buyer.pickup.tickets" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | PickupTicket" />
+		<put-attribute name="page-content" value="/WEB-INF/views/buyer/BM_pickupTickets.jsp" />
+	</definition>
+	
+	<!-- Ajax Based EPAP - 19-10-2019 -->
+	<definition name="ajax.buyer.pickup.tickets" template="/WEB-INF/views/buyer/BM_pickupTickets.jsp">  
+	</definition>
+	
+	<definition name="buyer.auction.bid.placing" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Buyer Auction Bid Placing" />
+		<put-attribute name="page-content" value="/WEB-INF/views/buyer/BM_auctionBidPlacing.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.buyer.auction.bid.placing" template="/WEB-INF/views/buyer/BM_auctionBidPlacing.jsp">  
+	</definition>
+	
+	<definition name="buyer.confirm.delivery" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Confirm Delivery" />
+		<put-attribute name="page-content" value="/WEB-INF/views/buyer/BM_confirmDelivery.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.buyer.confirm.delivery" template="/WEB-INF/views/buyer/BM_confirmDelivery.jsp">  
+	</definition>
+	<definition name="buyer.shippers.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shippers" />
+		<put-attribute name="page-content" value="/WEB-INF/views/buyer/BM_shippers.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.buyer.shippers.list" template="/WEB-INF/views/buyer/BM_shippers.jsp">  
+	</definition>
+	
+<!-- Shipper Templates ===================================================================================== -->
+	<definition name="shipper.info.picture" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shipper Information &amp; Pictures" />
+		<put-attribute name="page-content" value="/WEB-INF/views/shipper/SHM_shipperInfoPicture.jsp" />
+	</definition>
+
+	<definition name="ajax.shipper.info.picture" template="/WEB-INF/views/shipper/SHM_shipperInfoPicture.jsp">  
+	</definition>
+	
+	
+	<definition name="shipper.financial.statement" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Financial Statement" />
+		<put-attribute name="page-content" value="/WEB-INF/views/shipper/SHM_accountStatement.jsp" />
+	</definition>
+	
+	<definition name="ajax.shipper.financial.statement" template="/WEB-INF/views/shipper/SHM_accountStatement.jsp">  
+	</definition>
+	
+	<definition name="shipper.confirm.delivery" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Confirm Delivery" />
+		<put-attribute name="page-content" value="/WEB-INF/views/shipper/SHM_confirmDelivery.jsp" />
+	</definition>
+	
+		<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.shipper.confirm.delivery" template="/WEB-INF/views/shipper/SHM_confirmDelivery.jsp">  
+	</definition>
+	
+	<definition name="shipper.shippers.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shippers" />
+		<put-attribute name="page-content" value="/WEB-INF/views/shipper/SHM_shippers.jsp" />
+	</definition>
+	
+		<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.shipper.shippers.list" template="/WEB-INF/views/shipper/SHM_shippers.jsp">  
+	</definition>
+	
+<!-- Admin Templates ======================================================================================= -->
+	<definition name="admin.home" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Admin Dashboard" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_adminHome.jsp" />
+	</definition>
+
+	<definition name="admin.user.details.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | User Details List" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_userDetailList.jsp" />
+	</definition>
+			<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.user.details.list" template="/WEB-INF/views/admin/AM_userDetailList.jsp">  
+	</definition>
+	<definition name="admin.update.user.details" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Update User Details" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/views/admin/AM_updateUserDetail.jsp" />
+	</definition>
+			<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.update.user.details" template="/WEB-INF/views/admin/AM_updateUserDetail.jsp">  
+	</definition>
+	<definition name="admin.update.user.details.role.user" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Update User Details" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/views/admin/AM_updateUserDetailRoleUser.jsp" />
+	</definition>
+				<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.update.user.details.role.user" template="/WEB-INF/views/admin/AM_updateUserDetailRoleUser.jsp">  
+	</definition>
+	<definition name="admin.royalty.code.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Royalty Code Management" />
+		<put-attribute name="page-content"
+			value="/WEB-INF/views/admin/AM_royaltyCodeList.jsp" />
+	</definition>
+	<definition name="ajax.admin.royalty.code.list" template="/WEB-INF/views/admin/AM_royaltyCodeList.jsp">  
+	</definition>
+	<definition name="admin.notification.event.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Notification Event Management" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_notificationEventList.jsp" />
+	</definition>
+		<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.notification.event.list" template="/WEB-INF/views/admin/AM_notificationEventList.jsp">  
+	</definition>
+	
+	<definition name="common.notification.event.subscription" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Notification Event Subscription" />
+		<put-attribute name="page-content" value="/WEB-INF/views/common/notificationEventSubscription.jsp" />
+	</definition>
+	
+		<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.common.notification.event.subscription" template="/WEB-INF/views/common/notificationEventSubscription.jsp">  
+	</definition>
+
+	<definition name="admin.auction.settings.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Notification Event Management" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_auctionSettingsList.jsp" />
+	</definition>
+	<definition name="ajax.admin.auction.settings.list" template="/WEB-INF/views/admin/AM_auctionSettingsList.jsp">  
+	</definition>
+	<definition name="admin.product.catalog.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Notification Event Management" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_productCatalogList.jsp" />
+	</definition>
+	<definition name="ajax.admin.product.catalog.list" template="/WEB-INF/views/admin/AM_productCatalogList.jsp">  
+	</definition>
+	
+	<definition name="admin.announcement.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Notification Event Management" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_announcement.jsp" />
+	</definition>
+	<definition name="ajax.admin.announcement.list" template="/WEB-INF/views/admin/AM_announcement.jsp">  
+	</definition>
+	
+	
+	
+	
+	<definition name="admin.auction.request.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Admin Auction Request" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_auctionRequestApprovalList.jsp" />
+	</definition>
+			<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.auction.request.list" template="/WEB-INF/views/admin/AM_auctionRequestApprovalList.jsp">  
+	</definition>
+
+	<definition name="admin.auction.management.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Admin Auction Management" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_auctionList.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.auction.management.list" template="/WEB-INF/views/admin/AM_auctionList.jsp">  
+	</definition>
+	<definition name="admin.comments.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Admin Comments Management" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_comments.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.comments.list" template="/WEB-INF/views/admin/AM_comments.jsp">  
+	</definition>
+	<definition name="admin.user.financial.statement" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | User Financial Statement" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_accountStatement.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.user.financial.statement" template="/WEB-INF/views/admin/AM_accountStatement.jsp">  
+	</definition>
+	
+	<definition name="admin.epap.account.statement" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | User EPAP Statement" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_epapStatement.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.epap.account.statement" template="/WEB-INF/views/admin/AM_epapStatement.jsp">  
+	</definition>
+	<definition name="admin.vat.account.statement" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Vat Account Statement" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_vatAccountStatement.jsp" />
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.vat.account.statement" template="/WEB-INF/views/admin/AM_vatAccountStatement.jsp">  
+	</definition>
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.user.financial.statement" template="/WEB-INF/views/admin/AM_accountStatement.jsp">  
+	</definition>
+
+	<definition name="admin.report.system" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | System Reports" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_systemReport.jsp" />
+	</definition>
+	<definition name="ajax.admin.report.system" template="/WEB-INF/views/admin/AM_systemReport.jsp">  
+	</definition>
+	<definition name="admin.manage.shipping" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shipping Management" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/AM_manageShipping.jsp" />
+	</definition>
+	<definition name="ajax.admin.manage.shipping" template="/WEB-INF/views/admin/AM_manageShipping.jsp">  
+	</definition>
+	
+<!-- Admin Superuser Templates ============================================================================= -->	
+
+	<definition name="admin.super.shippers.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shippers" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/super/AM_SUP_shippers.jsp" />
+	</definition>
+		<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.super.shippers.list" template="/WEB-INF/views/admin/super/AM_SUP_shippers.jsp">  
+	</definition>
+	
+
+<!-- Admin Finance Templates =============================================================================== -->	
+	<definition name="admin.finance.user.balance.details.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | User Balance Details List" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/finance/AM_FIN_userBalanceList.jsp" />
+	</definition>
+		<definition name="ajax.admin.finance.user.balance.details.list" template="/WEB-INF/views/admin/finance/AM_FIN_userBalanceList.jsp">  
+	</definition>	
+	<definition name="admin.report.finance" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Finance Report" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/finance/AM_FIN_financeReport.jsp" />
+	</definition>
+	<definition name="ajax.admin.report.finance" template="/WEB-INF/views/admin/finance/AM_FIN_financeReport.jsp">  
+	</definition>
+
+	<definition name="admin.finance.shippers.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shippers" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/finance/AM_FIN_shippers.jsp" />
+	</definition>
+	 <!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.finance.shippers.list" template="/WEB-INF/views/admin/finance/AM_FIN_shippers.jsp">  
+	</definition>
+	
+<!-- Admin Relations Templates ============================================================================= -->
+	<definition name="admin.report.relations" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Relations Report" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/relations/AM_REL_relationsReport.jsp" />
+	</definition>
+		 <!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.report.relations" template="/WEB-INF/views/admin/relations/AM_REL_relationsReport.jsp">  
+	</definition>
+	<definition name="admin.relation.shippers.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shippers" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/relations/AM_REL_shippers.jsp" />
+	</definition>
+	 <!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.relation.shippers.list" template="/WEB-INF/views/admin/relations/AM_REL_shippers.jsp">  
+	</definition>
+<!-- Admin Shipping Templates ============================================================================== -->
+	<definition name="admin.report.shipping" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shipping Report" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/shipping/AM_SHIP_shippingReport.jsp" />
+	</definition>
+	<definition name="ajax.admin.report.shipping" template="/WEB-INF/views/admin/shipping/AM_SHIP_shippingReport.jsp">  
+	</definition>
+		<definition name="admin.shipping.shippers.list" extends="backend.layout">
+		<put-attribute name="page-title" value="EPAP | Shipping Report" />
+		<put-attribute name="page-content" value="/WEB-INF/views/admin/shipping/AM_SHIP_shippers.jsp" />
+	</definition>
+	
+	<!-- Ajax Based EPAP - 07-09-2018 -->
+	<definition name="ajax.admin.shipping.shippers.list" template="/WEB-INF/views/admin/shipping/AM_SHIP_shippers.jsp">  
+	</definition>
+	
+	
+	
+	
+</tiles-definitions>
